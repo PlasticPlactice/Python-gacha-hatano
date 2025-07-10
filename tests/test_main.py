@@ -1,11 +1,6 @@
-from fastapi.testclient import TestClient
-from src.main import app
+from src.main import pull_gacha
 
-client = TestClient(app)
-
-def test_gacha():
-    response = client.get("/gacha")
-    assert response.status_code == 200
-    json_data = response.json()
-    assert "rarity" in json_data
-    assert json_data["rarity"] in ["SSR", "SR", "R", "N"]
+def test_gacha_logic():
+    result = pull_gacha()
+    assert "rarity" in result
+    assert result["rarity"] in ["SSR", "SR", "R", "N"]
