@@ -19,10 +19,10 @@ app.add_middleware(
 
 # Gacha item rarities and their weights
 gacha_items = {
-    "SSR": 3,
-    "SR": 10,
-    "R": 37,
-    "N": 50,
+    "大吉": 3,
+    "凶": 10,
+    "大凶": 37,
+    "めっちゃ凶": 50,
 }
 
 # Create a weighted list of items
