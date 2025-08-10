@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ".venv/bin/pytest",
-    "dev": ".venv/bin/uvicorn src.main:app --reload"
+    "test": "pytest",
+    "dev": ".venv/bin/uvicorn src.main:app --reload",
+    "lint": "ruff check . && ruff format ."
   },
   "author": "",
   "license": "ISC"
