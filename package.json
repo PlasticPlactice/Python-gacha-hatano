@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": ".venv/bin/pytest",
-    "dev": ".venv/bin/uvicorn src.main:app --reload"
+    "dev": ".venv/bin/uvicorn src.main:app --reload",
+    "lint": ".venv/bin/ruff check . && .venv/bin/ruff format ."
   },
   "author": "",
   "license": "ISC"

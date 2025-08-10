@@ -1,4 +1,5 @@
 import random
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -29,6 +30,7 @@ gacha_items = {
 weighted_gacha = []
 for rarity, weight in gacha_items.items():
     weighted_gacha.extend([rarity] * weight)
+
 
 @app.get("/gacha")
 def pull_gacha():
